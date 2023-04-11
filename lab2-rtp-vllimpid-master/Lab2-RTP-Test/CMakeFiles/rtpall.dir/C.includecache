@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/src/rtp.c
+
+/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/src/rtp_more_file_1.c
+
+/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/src/rtp_more_file_2.c
+
+/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/src/util.c
+util.h
+/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/src/util.h
+
+/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/src/util.h
+stdint.h
+-
+stddef.h
+-
+sys/time.h
+-
+unistd.h
+-
+stdio.h
+-
+

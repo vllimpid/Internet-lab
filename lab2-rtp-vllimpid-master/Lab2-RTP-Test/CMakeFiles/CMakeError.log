@@ -1,0 +1,1450 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b2e4f/fast && /usr/bin/make -f CMakeFiles/cmTC_b2e4f.dir/build.make CMakeFiles/cmTC_b2e4f.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_b2e4f.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b2e4f.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b2e4f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2e4f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_b2e4f.dir/src.c.o  -o cmTC_b2e4f 
+/usr/bin/ld: CMakeFiles/cmTC_b2e4f.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b2e4f.dir/build.make:87：cmTC_b2e4f] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_b2e4f/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_306ed/fast && /usr/bin/make -f CMakeFiles/cmTC_306ed.dir/build.make CMakeFiles/cmTC_306ed.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_306ed.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_306ed.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_306ed
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_306ed.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_306ed.dir/CheckFunctionExists.c.o  -o cmTC_306ed  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_306ed.dir/build.make:87：cmTC_306ed] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_306ed/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_15b82/fast && /usr/bin/make -f CMakeFiles/cmTC_15b82.dir/build.make CMakeFiles/cmTC_15b82.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_15b82.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_15b82.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_15b82
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15b82.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_15b82.dir/src.c.o  -o cmTC_15b82 
+/usr/bin/ld: CMakeFiles/cmTC_15b82.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_15b82.dir/build.make:87：cmTC_15b82] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_15b82/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_56cc0/fast && /usr/bin/make -f CMakeFiles/cmTC_56cc0.dir/build.make CMakeFiles/cmTC_56cc0.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_56cc0.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_56cc0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_56cc0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56cc0.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_56cc0.dir/CheckFunctionExists.c.o  -o cmTC_56cc0  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_56cc0.dir/build.make:87：cmTC_56cc0] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_56cc0/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e277c/fast && /usr/bin/make -f CMakeFiles/cmTC_e277c.dir/build.make CMakeFiles/cmTC_e277c.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_e277c.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e277c.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e277c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e277c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_e277c.dir/src.c.o  -o cmTC_e277c 
+/usr/bin/ld: CMakeFiles/cmTC_e277c.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e277c.dir/build.make:87：cmTC_e277c] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_e277c/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9ee47/fast && /usr/bin/make -f CMakeFiles/cmTC_9ee47.dir/build.make CMakeFiles/cmTC_9ee47.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_9ee47.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9ee47.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9ee47
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ee47.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_9ee47.dir/CheckFunctionExists.c.o  -o cmTC_9ee47  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_9ee47.dir/build.make:87：cmTC_9ee47] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_9ee47/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6c8e0/fast && /usr/bin/make -f CMakeFiles/cmTC_6c8e0.dir/build.make CMakeFiles/cmTC_6c8e0.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_6c8e0.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_6c8e0.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6c8e0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c8e0.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_6c8e0.dir/src.c.o  -o cmTC_6c8e0 
+/usr/bin/ld: CMakeFiles/cmTC_6c8e0.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_6c8e0.dir/build.make:87：cmTC_6c8e0] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_6c8e0/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_05991/fast && /usr/bin/make -f CMakeFiles/cmTC_05991.dir/build.make CMakeFiles/cmTC_05991.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_05991.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_05991.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_05991
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05991.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_05991.dir/CheckFunctionExists.c.o  -o cmTC_05991  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_05991.dir/build.make:87：cmTC_05991] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_05991/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_924c6/fast && /usr/bin/make -f CMakeFiles/cmTC_924c6.dir/build.make CMakeFiles/cmTC_924c6.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_924c6.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_924c6.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_924c6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_924c6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_924c6.dir/src.c.o  -o cmTC_924c6 
+/usr/bin/ld: CMakeFiles/cmTC_924c6.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_924c6.dir/build.make:87：cmTC_924c6] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_924c6/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c9740/fast && /usr/bin/make -f CMakeFiles/cmTC_c9740.dir/build.make CMakeFiles/cmTC_c9740.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_c9740.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c9740.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c9740
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9740.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c9740.dir/CheckFunctionExists.c.o  -o cmTC_c9740  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_c9740.dir/build.make:87：cmTC_c9740] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_c9740/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cf84a/fast && /usr/bin/make -f CMakeFiles/cmTC_cf84a.dir/build.make CMakeFiles/cmTC_cf84a.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_cf84a.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_cf84a.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_cf84a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf84a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_cf84a.dir/src.c.o  -o cmTC_cf84a 
+/usr/bin/ld: CMakeFiles/cmTC_cf84a.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_cf84a.dir/build.make:87：cmTC_cf84a] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_cf84a/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_85e9b/fast && /usr/bin/make -f CMakeFiles/cmTC_85e9b.dir/build.make CMakeFiles/cmTC_85e9b.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_85e9b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_85e9b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_85e9b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85e9b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_85e9b.dir/CheckFunctionExists.c.o  -o cmTC_85e9b  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_85e9b.dir/build.make:87：cmTC_85e9b] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_85e9b/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2d7f3/fast && /usr/bin/make -f CMakeFiles/cmTC_2d7f3.dir/build.make CMakeFiles/cmTC_2d7f3.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_2d7f3.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_2d7f3.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_2d7f3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d7f3.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_2d7f3.dir/src.c.o  -o cmTC_2d7f3 
+/usr/bin/ld: CMakeFiles/cmTC_2d7f3.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2d7f3.dir/build.make:87：cmTC_2d7f3] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_2d7f3/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_30a3c/fast && /usr/bin/make -f CMakeFiles/cmTC_30a3c.dir/build.make CMakeFiles/cmTC_30a3c.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_30a3c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_30a3c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_30a3c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30a3c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_30a3c.dir/CheckFunctionExists.c.o  -o cmTC_30a3c  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_30a3c.dir/build.make:87：cmTC_30a3c] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_30a3c/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_28dc8/fast && /usr/bin/make -f CMakeFiles/cmTC_28dc8.dir/build.make CMakeFiles/cmTC_28dc8.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_28dc8.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_28dc8.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_28dc8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28dc8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_28dc8.dir/src.c.o  -o cmTC_28dc8 
+/usr/bin/ld: CMakeFiles/cmTC_28dc8.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_28dc8.dir/build.make:87：cmTC_28dc8] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_28dc8/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5d677/fast && /usr/bin/make -f CMakeFiles/cmTC_5d677.dir/build.make CMakeFiles/cmTC_5d677.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_5d677.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5d677.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5d677
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d677.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5d677.dir/CheckFunctionExists.c.o  -o cmTC_5d677  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5d677.dir/build.make:87：cmTC_5d677] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_5d677/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f5d0c/fast && /usr/bin/make -f CMakeFiles/cmTC_f5d0c.dir/build.make CMakeFiles/cmTC_f5d0c.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_f5d0c.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_f5d0c.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f5d0c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5d0c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_f5d0c.dir/src.c.o  -o cmTC_f5d0c 
+/usr/bin/ld: CMakeFiles/cmTC_f5d0c.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_f5d0c.dir/build.make:87：cmTC_f5d0c] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_f5d0c/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b4766/fast && /usr/bin/make -f CMakeFiles/cmTC_b4766.dir/build.make CMakeFiles/cmTC_b4766.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_b4766.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b4766.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b4766
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4766.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_b4766.dir/CheckFunctionExists.c.o  -o cmTC_b4766  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b4766.dir/build.make:87：cmTC_b4766] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_b4766/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b3298/fast && /usr/bin/make -f CMakeFiles/cmTC_b3298.dir/build.make CMakeFiles/cmTC_b3298.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_b3298.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b3298.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b3298
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3298.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_b3298.dir/src.c.o  -o cmTC_b3298 
+/usr/bin/ld: CMakeFiles/cmTC_b3298.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b3298.dir/build.make:87：cmTC_b3298] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_b3298/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_01da5/fast && /usr/bin/make -f CMakeFiles/cmTC_01da5.dir/build.make CMakeFiles/cmTC_01da5.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_01da5.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_01da5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_01da5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01da5.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_01da5.dir/CheckFunctionExists.c.o  -o cmTC_01da5  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_01da5.dir/build.make:87：cmTC_01da5] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_01da5/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8e52b/fast && /usr/bin/make -f CMakeFiles/cmTC_8e52b.dir/build.make CMakeFiles/cmTC_8e52b.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_8e52b.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_8e52b.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8e52b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e52b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_8e52b.dir/src.c.o  -o cmTC_8e52b 
+/usr/bin/ld: CMakeFiles/cmTC_8e52b.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_8e52b.dir/build.make:87：cmTC_8e52b] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_8e52b/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8c23a/fast && /usr/bin/make -f CMakeFiles/cmTC_8c23a.dir/build.make CMakeFiles/cmTC_8c23a.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_8c23a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_8c23a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8c23a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c23a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_8c23a.dir/CheckFunctionExists.c.o  -o cmTC_8c23a  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_8c23a.dir/build.make:87：cmTC_8c23a] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_8c23a/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d1128/fast && /usr/bin/make -f CMakeFiles/cmTC_d1128.dir/build.make CMakeFiles/cmTC_d1128.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_d1128.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d1128.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d1128
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1128.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_d1128.dir/src.c.o  -o cmTC_d1128 
+/usr/bin/ld: CMakeFiles/cmTC_d1128.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d1128.dir/build.make:87：cmTC_d1128] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_d1128/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2e201/fast && /usr/bin/make -f CMakeFiles/cmTC_2e201.dir/build.make CMakeFiles/cmTC_2e201.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_2e201.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2e201.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2e201
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e201.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_2e201.dir/CheckFunctionExists.c.o  -o cmTC_2e201  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2e201.dir/build.make:87：cmTC_2e201] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_2e201/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fe6aa/fast && /usr/bin/make -f CMakeFiles/cmTC_fe6aa.dir/build.make CMakeFiles/cmTC_fe6aa.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_fe6aa.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_fe6aa.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fe6aa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe6aa.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_fe6aa.dir/src.c.o  -o cmTC_fe6aa 
+/usr/bin/ld: CMakeFiles/cmTC_fe6aa.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_fe6aa.dir/build.make:87：cmTC_fe6aa] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_fe6aa/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_54556/fast && /usr/bin/make -f CMakeFiles/cmTC_54556.dir/build.make CMakeFiles/cmTC_54556.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_54556.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_54556.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_54556
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54556.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_54556.dir/CheckFunctionExists.c.o  -o cmTC_54556  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_54556.dir/build.make:87：cmTC_54556] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_54556/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_714bc/fast && /usr/bin/make -f CMakeFiles/cmTC_714bc.dir/build.make CMakeFiles/cmTC_714bc.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_714bc.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_714bc.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_714bc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_714bc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_714bc.dir/src.c.o  -o cmTC_714bc 
+/usr/bin/ld: CMakeFiles/cmTC_714bc.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_714bc.dir/build.make:87：cmTC_714bc] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_714bc/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e2ef0/fast && /usr/bin/make -f CMakeFiles/cmTC_e2ef0.dir/build.make CMakeFiles/cmTC_e2ef0.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_e2ef0.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e2ef0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e2ef0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2ef0.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e2ef0.dir/CheckFunctionExists.c.o  -o cmTC_e2ef0  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e2ef0.dir/build.make:87：cmTC_e2ef0] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_e2ef0/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c6b90/fast && /usr/bin/make -f CMakeFiles/cmTC_c6b90.dir/build.make CMakeFiles/cmTC_c6b90.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_c6b90.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_c6b90.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c6b90
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6b90.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_c6b90.dir/src.c.o  -o cmTC_c6b90 
+/usr/bin/ld: CMakeFiles/cmTC_c6b90.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_c6b90.dir/build.make:87：cmTC_c6b90] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_c6b90/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2620c/fast && /usr/bin/make -f CMakeFiles/cmTC_2620c.dir/build.make CMakeFiles/cmTC_2620c.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_2620c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2620c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2620c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2620c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_2620c.dir/CheckFunctionExists.c.o  -o cmTC_2620c  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2620c.dir/build.make:87：cmTC_2620c] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_2620c/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ce0d6/fast && /usr/bin/make -f CMakeFiles/cmTC_ce0d6.dir/build.make CMakeFiles/cmTC_ce0d6.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_ce0d6.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_ce0d6.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ce0d6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce0d6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_ce0d6.dir/src.c.o  -o cmTC_ce0d6 
+/usr/bin/ld: CMakeFiles/cmTC_ce0d6.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ce0d6.dir/build.make:87：cmTC_ce0d6] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_ce0d6/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5336a/fast && /usr/bin/make -f CMakeFiles/cmTC_5336a.dir/build.make CMakeFiles/cmTC_5336a.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_5336a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5336a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5336a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5336a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5336a.dir/CheckFunctionExists.c.o  -o cmTC_5336a  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5336a.dir/build.make:87：cmTC_5336a] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_5336a/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_132e1/fast && /usr/bin/make -f CMakeFiles/cmTC_132e1.dir/build.make CMakeFiles/cmTC_132e1.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_132e1.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_132e1.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_132e1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_132e1.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_132e1.dir/src.c.o  -o cmTC_132e1 
+/usr/bin/ld: CMakeFiles/cmTC_132e1.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_132e1.dir/build.make:87：cmTC_132e1] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_132e1/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b1698/fast && /usr/bin/make -f CMakeFiles/cmTC_b1698.dir/build.make CMakeFiles/cmTC_b1698.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_b1698.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b1698.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b1698
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1698.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_b1698.dir/CheckFunctionExists.c.o  -o cmTC_b1698  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b1698.dir/build.make:87：cmTC_b1698] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_b1698/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9557b/fast && /usr/bin/make -f CMakeFiles/cmTC_9557b.dir/build.make CMakeFiles/cmTC_9557b.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_9557b.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_9557b.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9557b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9557b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_9557b.dir/src.c.o  -o cmTC_9557b 
+/usr/bin/ld: CMakeFiles/cmTC_9557b.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_9557b.dir/build.make:87：cmTC_9557b] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_9557b/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ab470/fast && /usr/bin/make -f CMakeFiles/cmTC_ab470.dir/build.make CMakeFiles/cmTC_ab470.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_ab470.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ab470.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ab470
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab470.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_ab470.dir/CheckFunctionExists.c.o  -o cmTC_ab470  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ab470.dir/build.make:87：cmTC_ab470] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_ab470/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b4cd3/fast && /usr/bin/make -f CMakeFiles/cmTC_b4cd3.dir/build.make CMakeFiles/cmTC_b4cd3.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_b4cd3.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b4cd3.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b4cd3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4cd3.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_b4cd3.dir/src.c.o  -o cmTC_b4cd3 
+/usr/bin/ld: CMakeFiles/cmTC_b4cd3.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b4cd3.dir/build.make:87：cmTC_b4cd3] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_b4cd3/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cfd47/fast && /usr/bin/make -f CMakeFiles/cmTC_cfd47.dir/build.make CMakeFiles/cmTC_cfd47.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_cfd47.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_cfd47.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cfd47
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfd47.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_cfd47.dir/CheckFunctionExists.c.o  -o cmTC_cfd47  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_cfd47.dir/build.make:87：cmTC_cfd47] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_cfd47/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_13529/fast && /usr/bin/make -f CMakeFiles/cmTC_13529.dir/build.make CMakeFiles/cmTC_13529.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_13529.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_13529.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_13529
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13529.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_13529.dir/src.c.o  -o cmTC_13529 
+/usr/bin/ld: CMakeFiles/cmTC_13529.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_13529.dir/build.make:87：cmTC_13529] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_13529/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c07f8/fast && /usr/bin/make -f CMakeFiles/cmTC_c07f8.dir/build.make CMakeFiles/cmTC_c07f8.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_c07f8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c07f8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c07f8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c07f8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c07f8.dir/CheckFunctionExists.c.o  -o cmTC_c07f8  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_c07f8.dir/build.make:87：cmTC_c07f8] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_c07f8/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7ffec/fast && /usr/bin/make -f CMakeFiles/cmTC_7ffec.dir/build.make CMakeFiles/cmTC_7ffec.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_7ffec.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_7ffec.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7ffec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7ffec.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_7ffec.dir/src.c.o  -o cmTC_7ffec 
+/usr/bin/ld: CMakeFiles/cmTC_7ffec.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_7ffec.dir/build.make:87：cmTC_7ffec] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_7ffec/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6e1da/fast && /usr/bin/make -f CMakeFiles/cmTC_6e1da.dir/build.make CMakeFiles/cmTC_6e1da.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_6e1da.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_6e1da.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6e1da
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e1da.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_6e1da.dir/CheckFunctionExists.c.o  -o cmTC_6e1da  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_6e1da.dir/build.make:87：cmTC_6e1da] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_6e1da/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_de26b/fast && /usr/bin/make -f CMakeFiles/cmTC_de26b.dir/build.make CMakeFiles/cmTC_de26b.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_de26b.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_de26b.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_de26b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de26b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_de26b.dir/src.c.o  -o cmTC_de26b 
+/usr/bin/ld: CMakeFiles/cmTC_de26b.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_de26b.dir/build.make:87：cmTC_de26b] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_de26b/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a2cfa/fast && /usr/bin/make -f CMakeFiles/cmTC_a2cfa.dir/build.make CMakeFiles/cmTC_a2cfa.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_a2cfa.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a2cfa.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a2cfa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2cfa.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a2cfa.dir/CheckFunctionExists.c.o  -o cmTC_a2cfa  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a2cfa.dir/build.make:87：cmTC_a2cfa] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_a2cfa/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b2fc9/fast && /usr/bin/make -f CMakeFiles/cmTC_b2fc9.dir/build.make CMakeFiles/cmTC_b2fc9.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_b2fc9.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b2fc9.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b2fc9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2fc9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_b2fc9.dir/src.c.o  -o cmTC_b2fc9 
+/usr/bin/ld: CMakeFiles/cmTC_b2fc9.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b2fc9.dir/build.make:87：cmTC_b2fc9] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_b2fc9/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1b371/fast && /usr/bin/make -f CMakeFiles/cmTC_1b371.dir/build.make CMakeFiles/cmTC_1b371.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_1b371.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1b371.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1b371
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b371.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_1b371.dir/CheckFunctionExists.c.o  -o cmTC_1b371  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_1b371.dir/build.make:87：cmTC_1b371] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_1b371/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_259a5/fast && /usr/bin/make -f CMakeFiles/cmTC_259a5.dir/build.make CMakeFiles/cmTC_259a5.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_259a5.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_259a5.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_259a5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_259a5.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_259a5.dir/src.c.o  -o cmTC_259a5 
+/usr/bin/ld: CMakeFiles/cmTC_259a5.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_259a5.dir/build.make:87：cmTC_259a5] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_259a5/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f2f9f/fast && /usr/bin/make -f CMakeFiles/cmTC_f2f9f.dir/build.make CMakeFiles/cmTC_f2f9f.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_f2f9f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f2f9f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f2f9f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2f9f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_f2f9f.dir/CheckFunctionExists.c.o  -o cmTC_f2f9f  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_f2f9f.dir/build.make:87：cmTC_f2f9f] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_f2f9f/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5ea0c/fast && /usr/bin/make -f CMakeFiles/cmTC_5ea0c.dir/build.make CMakeFiles/cmTC_5ea0c.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_5ea0c.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_5ea0c.dir/src.c.o   -c /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5ea0c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ea0c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_5ea0c.dir/src.c.o  -o cmTC_5ea0c 
+/usr/bin/ld: CMakeFiles/cmTC_5ea0c.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5ea0c.dir/build.make:87：cmTC_5ea0c] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_5ea0c/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_899e8/fast && /usr/bin/make -f CMakeFiles/cmTC_899e8.dir/build.make CMakeFiles/cmTC_899e8.dir/build
+make[1]: 进入目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_899e8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_899e8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_899e8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_899e8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_899e8.dir/CheckFunctionExists.c.o  -o cmTC_899e8  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_899e8.dir/build.make:87：cmTC_899e8] 错误 1
+make[1]: 离开目录“/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_899e8/fast] 错误 2
+
+
+

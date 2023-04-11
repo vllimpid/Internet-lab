@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vl/桌面/lab2-rtp-vllimpid/Lab2-RTP-Test/src/sender_def.c
+stdio.h
+-
+stdint.h
+-
+stdlib.h
+-
+time.h
+-
+math.h
+-
+stdlib.h
+-
+arpa/inet.h
+-
+netinet/in.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+
