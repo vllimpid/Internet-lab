@@ -1,0 +1,5 @@
+/home/vl/桌面/network labs/lab1-myftp-vllimpid/buildserver/CMakeFiles/rebuild_cache.dir
+/home/vl/桌面/network labs/lab1-myftp-vllimpid/buildserver/CMakeFiles/edit_cache.dir
+/home/vl/桌面/network labs/lab1-myftp-vllimpid/buildserver/CMakeFiles/test.dir
+/home/vl/桌面/network labs/lab1-myftp-vllimpid/buildserver/CMakeFiles/ftp_client.dir
+/home/vl/桌面/network labs/lab1-myftp-vllimpid/buildserver/CMakeFiles/ftp_server.dir
